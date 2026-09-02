@@ -1,1 +1,14 @@
 
+encrypted = [
+    0x1B, 0x3A, 0x28, 0x2E,
+    0x0D, 0x3B, 0x2B, 0x3B
+]
+
+key = 0x5A
+
+password = ""
+
+for byte in encrypted:
+    password += chr(byte ^ key)
+
+print(password)
